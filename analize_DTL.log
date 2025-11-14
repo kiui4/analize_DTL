@@ -1,0 +1,947 @@
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    analize_DTL    message    処理開始: メイン処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    analize_DTL    message    変動係数読み込み: COEFFICIENT_VARIATION = 60
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    loadDtlResult    message    処理開始: DTL試合結果一覧読み込み処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    loadDtlResult    message    TSVファイル読み込み完了: 174件
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    loadDtlResult    message    返却データフレーム出力
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    loadDtlResult    message    
+        YEAR SECTION  MATCH FIRST_PLAYER SECOND_PLAYER WIN_PLAYER  FIRST_WIN_FLG
+0    2024年前期     第1節   第1試合          ひんた         dotto      dotto              0
+1    2024年前期     第1節   第2試合          るるる          ドラ焼き       ドラ焼き              0
+2    2024年前期     第1節   第3試合        フェアリー          りっきー       りっきー              0
+3    2024年前期     第1節   第4試合        dotto          ミノミー      dotto              1
+4    2024年前期     第1節   第5試合         ドラ焼き           はるる        はるる              0
+5    2024年前期     第1節   第6試合         りっきー           のすけ       りっきー              1
+6    2024年前期     第1節   第7試合         ミノミー           ひんた       ミノミー              1
+7    2024年前期     第1節   第8試合          るるる           はるる        はるる              0
+8    2024年前期     第1節   第9試合          のすけ         フェアリー        のすけ              1
+9    2024年前期     第2節   第1試合          カイザ           はるる        はるる              0
+10   2024年前期     第2節   第2試合          のすけ          りっきー        のすけ              1
+11   2024年前期     第2節   第3試合    ZweiLance          セキボン       セキボン              0
+12   2024年前期     第2節   第4試合        フェアリー           はるる        はるる              0
+13   2024年前期     第2節   第5試合          のすけ           にわか        のすけ              1
+14   2024年前期     第2節   第6試合    ZweiLance           るるる        るるる              0
+15   2024年前期     第2節   第7試合          カイザ         フェアリー        カイザ              1
+16   2024年前期     第2節   第8試合          にわか          りっきー        にわか              1
+17   2024年前期     第2節   第9試合          るるる          セキボン       セキボン              0
+18   2024年前期     第3節   第1試合    ZweiLance           SON  ZweiLance              1
+19   2024年前期     第3節   第2試合         おんそく           るるる       おんそく              1
+20   2024年前期     第3節   第3試合          にわか          ミノミー       ミノミー              0
+21   2024年前期     第3節   第4試合          カイザ           SON        SON              0
+22   2024年前期     第3節   第5試合        dotto           るるる      dotto              1
+23   2024年前期     第3節   第6試合         ドラ焼き           にわか       ドラ焼き              1
+24   2024年前期     第3節   第7試合    ZweiLance           カイザ  ZweiLance              1
+25   2024年前期     第3節   第8試合         おんそく         dotto       おんそく              1
+26   2024年前期     第3節   第9試合         ミノミー          ドラ焼き       ミノミー              1
+27   2024年前期     第4節   第1試合          のすけ          りっきー        のすけ              1
+28   2024年前期     第4節   第2試合         セキボン          おんそく       おんそく              0
+29   2024年前期     第4節   第3試合        dotto           はるる      dotto              1
+30   2024年前期     第4節   第4試合          ひんた          りっきー        ひんた              1
+31   2024年前期     第4節   第5試合          SON          セキボン       セキボン              0
+32   2024年前期     第4節   第6試合          るるる         dotto        るるる              1
+33   2024年前期     第4節   第7試合          のすけ           ひんた        のすけ              1
+34   2024年前期     第4節   第8試合         おんそく           SON        SON              0
+35   2024年前期     第4節   第9試合          るるる           はるる        るるる              1
+36   2024年前期     第5節   第1試合          るるる          ドラ焼き        るるる              1
+37   2024年前期     第5節   第2試合         りっきー         フェアリー      フェアリー              0
+38   2024年前期     第5節   第3試合          にわか          セキボン        にわか              1
+39   2024年前期     第5節   第4試合          るるる           はるる        るるる              1
+40   2024年前期     第5節   第5試合          のすけ         フェアリー      フェアリー              0
+41   2024年前期     第5節   第6試合          にわか          おんそく       おんそく              0
+42   2024年前期     第5節   第7試合          はるる          ドラ焼き        はるる              1
+43   2024年前期     第5節   第8試合         りっきー           のすけ       りっきー              1
+44   2024年前期     第5節   第9試合         おんそく          セキボン       セキボン              0
+45   2024年前期     第6節   第1試合        フェアリー          ミノミー      フェアリー              1
+46   2024年前期     第6節   第2試合          SON          おんそく        SON              1
+47   2024年前期     第6節   第3試合    ZweiLance           るるる        るるる              0
+48   2024年前期     第6節   第4試合         ミノミー          セキボン       セキボン              0
+49   2024年前期     第6節   第5試合          カイザ          おんそく       おんそく              0
+50   2024年前期     第6節   第6試合    ZweiLance          ドラ焼き       ドラ焼き              0
+51   2024年前期     第6節   第7試合         セキボン         フェアリー       セキボン              1
+52   2024年前期     第6節   第8試合          SON           カイザ        SON              1
+53   2024年前期     第6節   第9試合          るるる          ドラ焼き       ドラ焼き              0
+54   2024年後期     第1節   第1試合         あーくん          りっきー       りっきー              0
+55   2024年後期     第1節   第2試合         ドラ焼き           はるる       ドラ焼き              1
+56   2024年後期     第1節   第3試合          るるる         dotto        るるる              1
+57   2024年後期     第1節   第4試合          にわか          りっきー        にわか              1
+58   2024年後期     第1節   第5試合     リキセキタクジン          ドラ焼き       ドラ焼き              0
+59   2024年後期     第1節   第6試合        dotto          マイケル      dotto              1
+60   2024年後期     第1節   第7試合         あーくん           にわか       あーくん              1
+61   2024年後期     第1節   第8試合          はるる      リキセキタクジン        はるる              1
+62   2024年後期     第1節   第9試合          るるる          マイケル        るるる              1
+63   2024年後期     第2節   第1試合         りっきー     ZweiLance       りっきー              1
+64   2024年後期     第2節   第2試合          にわか          セキボン        にわか              1
+65   2024年後期     第2節   第3試合         おんそく           カイザ        カイザ              0
+66   2024年後期     第2節   第4試合    ZweiLance           るるる  ZweiLance              1
+67   2024年後期     第2節   第5試合          にわか         フェアリー      フェアリー              0
+68   2024年後期     第2節   第6試合         あーくん          おんそく       あーくん              1
+69   2024年後期     第2節   第7試合         りっきー           るるる       りっきー              1
+70   2024年後期     第2節   第8試合        フェアリー          セキボン      フェアリー              1
+71   2024年後期     第2節   第9試合          カイザ          あーくん        カイザ              1
+72   2024年後期     第3節   第1試合    ZweiLance           はるる  ZweiLance              1
+73   2024年後期     第3節   第2試合           村井          マイケル       マイケル              0
+74   2024年後期     第3節   第3試合     リキセキタクジン           るるる        るるる              0
+75   2024年後期     第3節   第4試合         ドラ焼き           はるる        はるる              0
+76   2024年後期     第3節   第5試合        dotto            村井      dotto              1
+77   2024年後期     第3節   第6試合         セキボン           るるる        るるる              0
+78   2024年後期     第3節   第7試合    ZweiLance          ドラ焼き  ZweiLance              1
+79   2024年後期     第3節   第8試合        dotto          マイケル      dotto              1
+80   2024年後期     第3節   第9試合     リキセキタクジン          セキボン       セキボン              0
+81   2024年後期     第3節  第10試合        フェアリー          ドラ焼き      フェアリー              1
+82   2024年後期     第3節  第11試合         おんそく          ドラ焼き       ドラ焼き              0
+83   2024年後期     第3節  第12試合         おんそく         フェアリー      フェアリー              0
+84   2024年後期     第4節   第1試合         セキボン     ZweiLance  ZweiLance              0
+85   2024年後期     第4節   第2試合        dotto          おんそく       おんそく              0
+86   2024年後期     第4節   第3試合          にわか          りっきー        にわか              1
+87   2024年後期     第4節   第4試合        フェアリー          セキボン       セキボン              0
+88   2024年後期     第4節   第5試合         あーくん         dotto       あーくん              1
+89   2024年後期     第4節   第6試合          るるる          りっきー       りっきー              0
+90   2024年後期     第4節   第7試合    ZweiLance         フェアリー      フェアリー              0
+91   2024年後期     第4節   第8試合         おんそく          あーくん       おんそく              1
+92   2024年後期     第4節   第9試合          るるる           にわか        るるる              1
+93   2024年後期     第5節   第1試合          はるる           カイザ        カイザ              0
+94   2024年後期     第5節   第2試合          るるる          りっきー        るるる              1
+95   2024年後期     第5節   第3試合           村井          ドラ焼き       ドラ焼き              0
+96   2024年後期     第5節   第4試合          はるる          マイケル        はるる              1
+97   2024年後期     第5節   第5試合          にわか           るるる        るるる              0
+98   2024年後期     第5節   第6試合    ZweiLance            村井  ZweiLance              1
+99   2024年後期     第5節   第7試合          カイザ          マイケル        カイザ              1
+100  2024年後期     第5節   第8試合          にわか          りっきー        にわか              1
+101  2024年後期     第5節   第9試合         ドラ焼き     ZweiLance  ZweiLance              0
+102  2024年後期     第6節   第1試合           村井          おんそく         村井              1
+103  2024年後期     第6節   第2試合     リキセキタクジン           るるる   リキセキタクジン              1
+104  2024年後期     第6節   第3試合        フェアリー           にわか        にわか              0
+105  2024年後期     第6節   第4試合         セキボン          おんそく       セキボン              1
+106  2024年後期     第6節   第5試合         ドラ焼き      リキセキタクジン       ドラ焼き              1
+107  2024年後期     第6節   第6試合          にわか           カイザ        カイザ              0
+108  2024年後期     第6節   第7試合         セキボン            村井         村井              0
+109  2024年後期     第6節   第8試合         ドラ焼き           るるる       ドラ焼き              1
+110  2024年後期     第6節   第9試合          カイザ         フェアリー        カイザ              1
+111  2024年後期     第6節  第10試合        dotto     ZweiLance  ZweiLance              0
+112  2024年後期     第6節  第11試合         flat     ZweiLance       flat              1
+113  2024年後期     第6節  第12試合         flat         dotto       flat              1
+114  2025年前期     第1節   第1試合        dotto           るるる        るるる              0
+115  2025年前期     第1節   第2試合         りっきー         フェアリー       りっきー              1
+116  2025年前期     第1節   第3試合          カイザ           はるる        カイザ              1
+117  2025年前期     第1節   第4試合          デンネ         dotto      dotto              0
+118  2025年前期     第1節   第5試合        あんだんて          りっきー      あんだんて              1
+119  2025年前期     第1節   第6試合          カイザ           むった        むった              0
+120  2025年前期     第1節   第7試合          デンネ           るるる        るるる              0
+121  2025年前期     第1節   第8試合        フェアリー         あんだんて      フェアリー              1
+122  2025年前期     第1節   第9試合          むった           はるる        むった              1
+123  2025年前期     第2節   第1試合        あんだんて          りっきー      あんだんて              1
+124  2025年前期     第2節   第2試合         おんそく         dotto       おんそく              1
+125  2025年前期     第2節   第3試合          にわか          セキボン       セキボン              0
+126  2025年前期     第2節   第4試合          るるる         あんだんて        るるる              1
+127  2025年前期     第2節   第5試合         あーくん          おんそく       あーくん              1
+128  2025年前期     第2節   第6試合           村井           にわか        にわか              0
+129  2025年前期     第2節   第7試合         りっきー           るるる       りっきー              1
+130  2025年前期     第2節   第8試合        dotto          あーくん       あーくん              0
+131  2025年前期     第2節   第9試合           村井          セキボン       セキボン              0
+132  2025年前期     第3節   第1試合          デンネ           はるる        デンネ              1
+133  2025年前期     第3節   第2試合          にわか            村井        にわか              1
+134  2025年前期     第3節   第3試合          むった           るるる        むった              1
+135  2025年前期     第3節   第4試合         りっきー           はるる        はるる              0
+136  2025年前期     第3節   第5試合           村井           カイザ        カイザ              0
+137  2025年前期     第3節   第6試合         セキボン           るるる       セキボン              1
+138  2025年前期     第3節   第7試合          デンネ          りっきー        デンネ              1
+139  2025年前期     第3節   第8試合          にわか           カイザ        カイザ              0
+140  2025年前期     第3節   第9試合          むった          セキボン       セキボン              0
+141  2025年前期     第3節  第10試合        フェアリー          おんそく      フェアリー              1
+142  2025年前期     第3節  第11試合         ドラ焼き         フェアリー       ドラ焼き              1
+143  2025年前期     第3節  第12試合         ドラ焼き          おんそく       ドラ焼き              1
+144  2025年前期     第4節   第1試合          むった          ドラ焼き       ドラ焼き              0
+145  2025年前期     第4節   第2試合          デンネ          りっきー       りっきー              0
+146  2025年前期     第4節   第3試合         おんそく         dotto       おんそく              1
+147  2025年前期     第4節   第4試合        フェアリー          ドラ焼き      フェアリー              1
+148  2025年前期     第4節   第5試合         りっきー           るるる       りっきー              1
+149  2025年前期     第4節   第6試合         あーくん         dotto      dotto              0
+150  2025年前期     第4節   第7試合        フェアリー           むった      フェアリー              1
+151  2025年前期     第4節   第8試合          デンネ           るるる        るるる              0
+152  2025年前期     第4節   第9試合         おんそく          あーくん       おんそく              1
+153  2025年前期     第5節   第1試合         あーくん          ドラ焼き       あーくん              1
+154  2025年前期     第5節   第2試合         セキボン           はるる       セキボン              1
+155  2025年前期     第5節   第3試合         りっきー           るるる       りっきー              1
+156  2025年前期     第5節   第4試合         あーくん           むった       あーくん              1
+157  2025年前期     第5節   第5試合          はるる           デンネ        はるる              1
+158  2025年前期     第5節   第6試合          るるる         あんだんて        るるる              1
+159  2025年前期     第5節   第7試合          むった          ドラ焼き       ドラ焼き              0
+160  2025年前期     第5節   第8試合          デンネ          セキボン        デンネ              1
+161  2025年前期     第5節   第9試合        あんだんて          りっきー      あんだんて              1
+162  2025年前期     第6節   第1試合           村井           にわか         村井              1
+163  2025年前期     第6節   第2試合          るるる          おんそく       おんそく              0
+164  2025年前期     第6節   第3試合          はるる           デンネ        はるる              1
+165  2025年前期     第6節   第4試合          にわか          ドラ焼き        にわか              1
+166  2025年前期     第6節   第5試合          カイザ          おんそく        カイザ              1
+167  2025年前期     第6節   第6試合          デンネ          セキボン       セキボン              0
+168  2025年前期     第6節   第7試合           村井          ドラ焼き       ドラ焼き              0
+169  2025年前期     第6節   第8試合          るるる           カイザ        カイザ              0
+170  2025年前期     第6節   第9試合         セキボン           はるる        はるる              0
+171  2025年前期     第6節  第10試合    ZweiLance          flat  ZweiLance              1
+172  2025年前期     第6節  第11試合        dotto     ZweiLance  ZweiLance              0
+173  2025年前期     第6節  第12試合         flat         dotto      dotto              0
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    loadDtlResult    message    正常終了: DTL試合結果一覧読み込み処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcFirstWinRate    message    処理開始: 先手勝率計算処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcFirstWinRate    message    計算結果出力: 先手勝率 = 0.586
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcFirstWinRate    message    正常終了: 先手勝率計算処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    処理開始: レーティング計算処理
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    初期化処理完了: プレイヤーの一覧と初期レート出力
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    
+{'ひんた': 1500, 'dotto': 1500, 'るるる': 1500, 'ドラ焼き': 1500, 'フェアリー': 1500, 'りっきー': 1500, 'ミノミー': 1500, 'はるる': 1500, 'のすけ': 1500, 'カイザ': 1500, 'ZweiLance': 1500, 'セキボン': 1500, 'にわか': 1500, 'SON': 1500, 'おんそく': 1500, 'あーくん': 1500, 'リキセキタクジン': 1500, 'マイケル': 1500, '村井': 1500, 'flat': 1500, 'デンネ': 1500, 'あんだんて': 1500, 'むった': 1500}
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第1試合】レート更新 - ひんた: 1500 -> 1464.8
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第1試合】レート更新 - dotto: 1500 -> 1535.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第2試合】レート更新 - るるる: 1500 -> 1464.8
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第2試合】レート更新 - ドラ焼き: 1500 -> 1535.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第3試合】レート更新 - フェアリー: 1500 -> 1464.8
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第3試合】レート更新 - りっきー: 1500 -> 1535.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第4試合】レート更新 - dotto: 1535.2 -> 1557.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第4試合】レート更新 - ミノミー: 1500 -> 1478.0
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第5試合】レート更新 - ドラ焼き: 1535.2 -> 1497.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第5試合】レート更新 - はるる: 1500 -> 1538.0
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第6試合】レート更新 - りっきー: 1535.2 -> 1557.2
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第6試合】レート更新 - のすけ: 1500 -> 1478.0
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第7試合】レート更新 - ミノミー: 1478.0 -> 1501.7
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第7試合】レート更新 - ひんた: 1464.8 -> 1441.1
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第8試合】レート更新 - るるる: 1464.8 -> 1435.9
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第8試合】レート更新 - はるる: 1538.0 -> 1566.9
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第9試合】レート更新 - のすけ: 1478.0 -> 1501.7
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第1節|第9試合】レート更新 - フェアリー: 1464.8 -> 1441.1
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第1試合】レート更新 - カイザ: 1500 -> 1470.6
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第1試合】レート更新 - はるる: 1566.9 -> 1596.3
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第2試合】レート更新 - のすけ: 1501.7 -> 1531.3
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第2試合】レート更新 - りっきー: 1557.2 -> 1527.6
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第3試合】レート更新 - ZweiLance: 1500 -> 1464.8
+2025/11/14 20:59:08 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第3試合】レート更新 - セキボン: 1500 -> 1535.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第4試合】レート更新 - フェアリー: 1441.1 -> 1419.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第4試合】レート更新 - はるる: 1596.3 -> 1618.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第5試合】レート更新 - のすけ: 1531.3 -> 1553.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第5試合】レート更新 - にわか: 1500 -> 1477.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第6試合】レート更新 - ZweiLance: 1464.8 -> 1427.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第6試合】レート更新 - るるる: 1435.9 -> 1473.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第7試合】レート更新 - カイザ: 1470.6 -> 1491.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第7試合】レート更新 - フェアリー: 1419.1 -> 1398.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第8試合】レート更新 - にわか: 1477.7 -> 1506.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第8試合】レート更新 - りっきー: 1527.6 -> 1498.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第9試合】レート更新 - るるる: 1473.4 -> 1443.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第2節|第9試合】レート更新 - セキボン: 1535.2 -> 1565.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第1試合】レート更新 - ZweiLance: 1427.3 -> 1458.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第1試合】レート更新 - SON: 1500 -> 1468.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第2試合】レート更新 - おんそく: 1500 -> 1520.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第2試合】レート更新 - るるる: 1443.5 -> 1423.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第3試合】レート更新 - にわか: 1506.8 -> 1471.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第3試合】レート更新 - ミノミー: 1501.7 -> 1537.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第4試合】レート更新 - カイザ: 1491.3 -> 1454.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第4試合】レート更新 - SON: 1468.9 -> 1505.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第5試合】レート更新 - dotto: 1557.2 -> 1572.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第5試合】レート更新 - るるる: 1423.2 -> 1408.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第6試合】レート更新 - ドラ焼き: 1497.2 -> 1519.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第6試合】レート更新 - にわか: 1471.2 -> 1448.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第7試合】レート更新 - ZweiLance: 1458.4 -> 1482.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第7試合】レート更新 - カイザ: 1454.3 -> 1429.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第8試合】レート更新 - おんそく: 1520.3 -> 1549.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第8試合】レート更新 - dotto: 1572.0 -> 1542.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第9試合】レート更新 - ミノミー: 1537.3 -> 1560.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第3節|第9試合】レート更新 - ドラ焼き: 1519.9 -> 1496.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第1試合】レート更新 - のすけ: 1553.6 -> 1574.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第1試合】レート更新 - りっきー: 1498.5 -> 1478.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第2試合】レート更新 - セキボン: 1565.1 -> 1528.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第2試合】レート更新 - おんそく: 1549.6 -> 1586.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第3試合】レート更新 - dotto: 1542.7 -> 1574.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第3試合】レート更新 - はるる: 1618.3 -> 1587.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第4試合】レート更新 - ひんた: 1441.1 -> 1469.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第4試合】レート更新 - りっきー: 1478.1 -> 1450.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第5試合】レート更新 - SON: 1505.9 -> 1472.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第5試合】レート更新 - セキボン: 1528.7 -> 1561.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第6試合】レート更新 - るるる: 1408.4 -> 1447.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第6試合】レート更新 - dotto: 1574.0 -> 1535.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第7試合】レート更新 - のすけ: 1574.0 -> 1590.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第7試合】レート更新 - ひんた: 1469.1 -> 1452.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第8試合】レート更新 - おんそく: 1586.0 -> 1542.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第8試合】レート更新 - SON: 1472.7 -> 1516.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第9試合】レート更新 - るるる: 1447.2 -> 1483.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第4節|第9試合】レート更新 - はるる: 1587.0 -> 1550.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第1試合】レート更新 - るるる: 1483.9 -> 1509.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第1試合】レート更新 - ドラ焼き: 1496.5 -> 1470.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第2試合】レート更新 - りっきー: 1450.1 -> 1410.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第2試合】レート更新 - フェアリー: 1398.4 -> 1437.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第3試合】レート更新 - にわか: 1448.5 -> 1483.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第3試合】レート更新 - セキボン: 1561.9 -> 1527.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第4試合】レート更新 - るるる: 1509.8 -> 1538.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第4試合】レート更新 - はるる: 1550.3 -> 1522.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第5試合】レート更新 - のすけ: 1590.7 -> 1544.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第5試合】レート更新 - フェアリー: 1437.8 -> 1484.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第6試合】レート更新 - にわか: 1483.0 -> 1452.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第6試合】レート更新 - おんそく: 1542.1 -> 1572.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第7試合】レート更新 - はるる: 1522.0 -> 1542.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第7試合】レート更新 - ドラ焼き: 1470.6 -> 1449.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第8試合】レート更新 - りっきー: 1410.7 -> 1446.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第8試合】レート更新 - のすけ: 1544.3 -> 1508.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第9試合】レート更新 - おんそく: 1572.2 -> 1533.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第5節|第9試合】レート更新 - セキボン: 1527.4 -> 1566.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第1試合】レート更新 - フェアリー: 1484.2 -> 1515.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第1試合】レート更新 - ミノミー: 1560.7 -> 1529.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第2試合】レート更新 - SON: 1516.6 -> 1542.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第2試合】レート更新 - おんそく: 1533.4 -> 1507.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第3試合】レート更新 - ZweiLance: 1482.9 -> 1452.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第3試合】レート更新 - るるる: 1538.1 -> 1568.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第4試合】レート更新 - ミノミー: 1529.3 -> 1497.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第4試合】レート更新 - セキボン: 1566.2 -> 1598.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第5試合】レート更新 - カイザ: 1429.8 -> 1401.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第5試合】レート更新 - おんそく: 1507.1 -> 1535.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第6試合】レート更新 - ZweiLance: 1452.5 -> 1417.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第6試合】レート更新 - ドラ焼き: 1449.9 -> 1485.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第7試合】レート更新 - セキボン: 1598.2 -> 1616.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第7試合】レート更新 - フェアリー: 1515.6 -> 1497.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第8試合】レート更新 - SON: 1542.9 -> 1557.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第8試合】レート更新 - カイザ: 1401.3 -> 1387.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第9試合】レート更新 - るるる: 1568.5 -> 1526.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年前期|第6節|第9試合】レート更新 - ドラ焼き: 1485.3 -> 1527.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第1試合】レート更新 - あーくん: 1500 -> 1460.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第1試合】レート更新 - りっきー: 1446.9 -> 1486.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第2試合】レート更新 - ドラ焼き: 1527.0 -> 1553.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第2試合】レート更新 - はるる: 1542.7 -> 1516.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第3試合】レート更新 - るるる: 1526.8 -> 1552.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第3試合】レート更新 - dotto: 1535.2 -> 1509.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第4試合】レート更新 - にわか: 1452.9 -> 1480.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第4試合】レート更新 - りっきー: 1486.4 -> 1458.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第5試合】レート更新 - リキセキタクジン: 1500 -> 1469.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第5試合】レート更新 - ドラ焼き: 1553.2 -> 1583.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第6試合】レート更新 - dotto: 1509.7 -> 1533.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第6試合】レート更新 - マイケル: 1500 -> 1476.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第7試合】レート更新 - あーくん: 1460.5 -> 1487.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第7試合】レート更新 - にわか: 1480.6 -> 1454.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第8試合】レート更新 - はるる: 1516.5 -> 1537.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第8試合】レート更新 - リキセキタクジン: 1469.4 -> 1448.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第9試合】レート更新 - るるる: 1552.3 -> 1571.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第1節|第9試合】レート更新 - マイケル: 1476.0 -> 1457.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第1試合】レート更新 - りっきー: 1458.7 -> 1480.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第1試合】レート更新 - ZweiLance: 1417.1 -> 1395.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第2試合】レート更新 - にわか: 1454.1 -> 1492.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第2試合】レート更新 - セキボン: 1616.5 -> 1577.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第3試合】レート更新 - おんそく: 1535.6 -> 1489.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第3試合】レート更新 - カイザ: 1387.0 -> 1433.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第4試合】レート更新 - ZweiLance: 1395.7 -> 1435.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第4試合】レート更新 - るるる: 1571.1 -> 1531.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第5試合】レート更新 - にわか: 1492.7 -> 1457.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第5試合】レート更新 - フェアリー: 1497.3 -> 1532.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第6試合】レート更新 - あーくん: 1487.0 -> 1512.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第6試合】レート更新 - おんそく: 1489.5 -> 1464.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第7試合】レート更新 - りっきー: 1480.1 -> 1509.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第7試合】レート更新 - るるる: 1531.5 -> 1502.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第8試合】レート更新 - フェアリー: 1532.1 -> 1560.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第8試合】レート更新 - セキボン: 1577.9 -> 1549.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第9試合】レート更新 - カイザ: 1433.1 -> 1464.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第2節|第9試合】レート更新 - あーくん: 1512.0 -> 1480.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第1試合】レート更新 - ZweiLance: 1435.3 -> 1468.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第1試合】レート更新 - はるる: 1537.5 -> 1503.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第2試合】レート更新 - 村井: 1500 -> 1461.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第2試合】レート更新 - マイケル: 1457.2 -> 1495.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第3試合】レート更新 - リキセキタクジン: 1448.4 -> 1417.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第3試合】レート更新 - るるる: 1502.3 -> 1532.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第4試合】レート更新 - ドラ焼き: 1583.8 -> 1542.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第4試合】レート更新 - はるる: 1503.9 -> 1545.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第5試合】レート更新 - dotto: 1533.7 -> 1552.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第5試合】レート更新 - 村井: 1461.3 -> 1442.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第6試合】レート更新 - セキボン: 1549.2 -> 1512.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第6試合】レート更新 - るるる: 1532.9 -> 1569.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第7試合】レート更新 - ZweiLance: 1468.9 -> 1500.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第7試合】レート更新 - ドラ焼き: 1542.3 -> 1511.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第8試合】レート更新 - dotto: 1552.8 -> 1573.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第8試合】レート更新 - マイケル: 1495.9 -> 1475.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第9試合】レート更新 - リキセキタクジン: 1417.8 -> 1390.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第9試合】レート更新 - セキボン: 1512.7 -> 1539.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第10試合】レート更新 - フェアリー: 1560.8 -> 1581.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第10試合】レート更新 - ドラ焼き: 1511.2 -> 1490.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第11試合】レート更新 - おんそく: 1464.5 -> 1431.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第11試合】レート更新 - ドラ焼き: 1490.4 -> 1523.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第12試合】レート更新 - おんそく: 1431.5 -> 1409.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第3節|第12試合】レート更新 - フェアリー: 1581.6 -> 1604.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第1試合】レート更新 - セキボン: 1539.7 -> 1501.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第1試合】レート更新 - ZweiLance: 1500.0 -> 1538.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第2試合】レート更新 - dotto: 1573.0 -> 1525.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第2試合】レート更新 - おんそく: 1409.1 -> 1456.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第3試合】レート更新 - にわか: 1457.9 -> 1487.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第3試合】レート更新 - りっきー: 1509.3 -> 1480.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第4試合】レート更新 - フェアリー: 1604.0 -> 1560.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第4試合】レート更新 - セキボン: 1501.3 -> 1544.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第5試合】レート更新 - あーくん: 1480.4 -> 1509.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第5試合】レート更新 - dotto: 1525.9 -> 1497.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第6試合】レート更新 - るるる: 1569.4 -> 1527.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第6試合】レート更新 - りっきー: 1480.1 -> 1522.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第7試合】レート更新 - ZweiLance: 1538.4 -> 1505.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第7試合】レート更新 - フェアリー: 1560.9 -> 1594.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第8試合】レート更新 - おんそく: 1456.2 -> 1485.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第8試合】レート更新 - あーくん: 1509.1 -> 1479.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第9試合】レート更新 - るるる: 1527.2 -> 1548.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第4節|第9試合】レート更新 - にわか: 1487.1 -> 1465.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第1試合】レート更新 - はるる: 1545.4 -> 1503.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第1試合】レート更新 - カイザ: 1464.7 -> 1506.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第2試合】レート更新 - るるる: 1548.8 -> 1571.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第2試合】レート更新 - りっきー: 1522.3 -> 1499.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第3試合】レート更新 - 村井: 1442.2 -> 1414.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第3試合】レート更新 - ドラ焼き: 1523.4 -> 1551.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第4試合】レート更新 - はるる: 1503.8 -> 1526.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第4試合】レート更新 - マイケル: 1475.7 -> 1453.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第5試合】レート更新 - にわか: 1465.5 -> 1439.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第5試合】レート更新 - るるる: 1571.5 -> 1597.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第6試合】レート更新 - ZweiLance: 1505.1 -> 1522.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第6試合】レート更新 - 村井: 1414.0 -> 1396.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第7試合】レート更新 - カイザ: 1506.3 -> 1526.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第7試合】レート更新 - マイケル: 1453.2 -> 1432.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第8試合】レート更新 - にわか: 1439.4 -> 1469.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第8試合】レート更新 - りっきー: 1499.6 -> 1469.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第9試合】レート更新 - ドラ焼き: 1551.6 -> 1514.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第5節|第9試合】レート更新 - ZweiLance: 1522.8 -> 1560.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第1試合】レート更新 - 村井: 1396.3 -> 1428.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第1試合】レート更新 - おんそく: 1485.6 -> 1453.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第2試合】レート更新 - リキセキタクジン: 1390.8 -> 1432.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第2試合】レート更新 - るるる: 1597.6 -> 1555.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第3試合】レート更新 - フェアリー: 1594.2 -> 1549.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第3試合】レート更新 - にわか: 1469.4 -> 1514.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第4試合】レート更新 - セキボン: 1544.4 -> 1562.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第4試合】レート更新 - おんそく: 1453.1 -> 1435.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第5試合】レート更新 - ドラ焼き: 1514.1 -> 1532.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第5試合】レート更新 - リキセキタクジン: 1432.7 -> 1414.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第6試合】レート更新 - にわか: 1514.0 -> 1479.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第6試合】レート更新 - カイザ: 1526.8 -> 1560.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第7試合】レート更新 - セキボン: 1562.1 -> 1516.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第7試合】レート更新 - 村井: 1428.8 -> 1474.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第8試合】レート更新 - ドラ焼き: 1532.5 -> 1559.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第8試合】レート更新 - るるる: 1555.7 -> 1528.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第9試合】レート更新 - カイザ: 1560.9 -> 1584.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第9試合】レート更新 - フェアリー: 1549.6 -> 1525.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第10試合】レート更新 - dotto: 1497.2 -> 1467.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第10試合】レート更新 - ZweiLance: 1560.3 -> 1590.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第11試合】レート更新 - flat: 1500 -> 1532.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第11試合】レート更新 - ZweiLance: 1590.1 -> 1557.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第12試合】レート更新 - flat: 1532.6 -> 1552.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2024年後期|第6節|第12試合】レート更新 - dotto: 1467.4 -> 1447.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第1試合】レート更新 - dotto: 1447.8 -> 1419.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第1試合】レート更新 - るるる: 1528.9 -> 1557.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第2試合】レート更新 - りっきー: 1469.6 -> 1499.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第2試合】レート更新 - フェアリー: 1525.7 -> 1496.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第3試合】レート更新 - カイザ: 1584.8 -> 1604.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第3試合】レート更新 - はるる: 1526.3 -> 1506.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第4試合】レート更新 - デンネ: 1500 -> 1458.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第4試合】レート更新 - dotto: 1419.6 -> 1461.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第5試合】レート更新 - あんだんて: 1500 -> 1524.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第5試合】レート更新 - りっきー: 1499.2 -> 1474.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第6試合】レート更新 - カイザ: 1604.9 -> 1561.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第6試合】レート更新 - むった: 1500 -> 1543.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第7試合】レート更新 - デンネ: 1458.5 -> 1431.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第7試合】レート更新 - るるる: 1557.1 -> 1583.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第8試合】レート更新 - フェアリー: 1496.1 -> 1523.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第8試合】レート更新 - あんだんて: 1524.8 -> 1497.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第9試合】レート更新 - むった: 1543.3 -> 1565.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第1節|第9試合】レート更新 - はるる: 1506.2 -> 1484.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第1試合】レート更新 - あんだんて: 1497.5 -> 1520.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第1試合】レート更新 - りっきー: 1474.4 -> 1451.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第2試合】レート更新 - おんそく: 1435.4 -> 1462.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第2試合】レート更新 - dotto: 1461.1 -> 1434.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第3試合】レート更新 - にわか: 1479.9 -> 1447.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第3試合】レート更新 - セキボン: 1516.9 -> 1548.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第4試合】レート更新 - るるる: 1583.8 -> 1603.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第4試合】レート更新 - あんだんて: 1520.4 -> 1500.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第5試合】レート更新 - あーくん: 1479.7 -> 1503.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第5試合】レート更新 - おんそく: 1462.4 -> 1439.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第6試合】レート更新 - 村井: 1474.0 -> 1436.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第6試合】レート更新 - にわか: 1447.9 -> 1485.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第7試合】レート更新 - りっきー: 1451.5 -> 1489.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第7試合】レート更新 - るるる: 1603.5 -> 1565.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第8試合】レート更新 - dotto: 1434.1 -> 1404.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第8試合】レート更新 - あーくん: 1503.1 -> 1532.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第9試合】レート更新 - 村井: 1436.7 -> 1411.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第2節|第9試合】レート更新 - セキボン: 1548.9 -> 1574.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第1試合】レート更新 - デンネ: 1431.8 -> 1461.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第1試合】レート更新 - はるる: 1484.4 -> 1455.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第2試合】レート更新 - にわか: 1485.2 -> 1504.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第2試合】レート更新 - 村井: 1411.1 -> 1392.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第3試合】レート更新 - むった: 1565.1 -> 1590.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第3試合】レート更新 - るるる: 1565.8 -> 1540.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第4試合】レート更新 - りっきー: 1489.2 -> 1451.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第4試合】レート更新 - はるる: 1455.1 -> 1493.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第5試合】レート更新 - 村井: 1392.2 -> 1371.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第5試合】レート更新 - カイザ: 1561.6 -> 1582.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第6試合】レート更新 - セキボン: 1574.5 -> 1596.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第6試合】レート更新 - るるる: 1540.9 -> 1518.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第7試合】レート更新 - デンネ: 1461.1 -> 1485.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第7試合】レート更新 - りっきー: 1451.2 -> 1427.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第8試合】レート更新 - にわか: 1504.1 -> 1475.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第8試合】レート更新 - カイザ: 1582.5 -> 1610.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第9試合】レート更新 - むった: 1590.0 -> 1555.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第9試合】レート更新 - セキボン: 1596.6 -> 1631.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第10試合】レート更新 - フェアリー: 1523.4 -> 1541.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第10試合】レート更新 - おんそく: 1439.0 -> 1420.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第11試合】レート更新 - ドラ焼き: 1559.3 -> 1582.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第11試合】レート更新 - フェアリー: 1541.6 -> 1518.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第12試合】レート更新 - ドラ焼き: 1582.7 -> 1595.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第3節|第12試合】レート更新 - おんそく: 1420.8 -> 1407.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第1試合】レート更新 - むった: 1555.4 -> 1523.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第1試合】レート更新 - ドラ焼き: 1595.8 -> 1627.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第2試合】レート更新 - デンネ: 1485.1 -> 1445.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第2試合】レート更新 - りっきー: 1427.2 -> 1467.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第3試合】レート更新 - おんそく: 1407.7 -> 1432.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第3試合】レート更新 - dotto: 1404.8 -> 1380.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第4試合】レート更新 - フェアリー: 1518.2 -> 1552.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第4試合】レート更新 - ドラ焼き: 1627.5 -> 1593.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第5試合】レート更新 - りっきー: 1467.0 -> 1496.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第5試合】レート更新 - るるる: 1518.8 -> 1489.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第6試合】レート更新 - あーくん: 1532.4 -> 1486.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第6試合】レート更新 - dotto: 1380.2 -> 1426.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第7試合】レート更新 - フェアリー: 1552.4 -> 1574.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第7試合】レート更新 - むった: 1523.7 -> 1501.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第8試合】レート更新 - デンネ: 1445.3 -> 1413.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第8試合】レート更新 - るるる: 1489.5 -> 1520.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第9試合】レート更新 - おんそく: 1432.3 -> 1461.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第4節|第9試合】レート更新 - あーくん: 1486.0 -> 1456.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第1試合】レート更新 - あーくん: 1456.6 -> 1493.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第1試合】レート更新 - ドラ焼き: 1593.3 -> 1556.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第2試合】レート更新 - セキボン: 1631.2 -> 1645.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第2試合】レート更新 - はるる: 1493.1 -> 1478.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第3試合】レート更新 - りっきー: 1496.3 -> 1523.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第3試合】レート更新 - るるる: 1520.9 -> 1494.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第4試合】レート更新 - あーくん: 1493.1 -> 1518.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第4試合】レート更新 - むった: 1501.2 -> 1475.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第5試合】レート更新 - はるる: 1478.6 -> 1498.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第5試合】レート更新 - デンネ: 1413.9 -> 1394.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第6試合】レート更新 - るるる: 1494.0 -> 1519.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第6試合】レート更新 - あんだんて: 1500.7 -> 1475.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第7試合】レート更新 - むった: 1475.7 -> 1447.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第7試合】レート更新 - ドラ焼き: 1556.8 -> 1585.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第8試合】レート更新 - デンネ: 1394.3 -> 1439.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第8試合】レート更新 - セキボン: 1645.7 -> 1600.7
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第9試合】レート更新 - あんだんて: 1475.3 -> 1504.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第5節|第9試合】レート更新 - りっきー: 1523.2 -> 1494.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第1試合】レート更新 - 村井: 1371.3 -> 1405.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第1試合】レート更新 - にわか: 1475.7 -> 1441.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第2試合】レート更新 - るるる: 1519.4 -> 1479.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第2試合】レート更新 - おんそく: 1461.7 -> 1501.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第3試合】レート更新 - はるる: 1498.2 -> 1518.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第3試合】レート更新 - デンネ: 1439.3 -> 1419.2
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第4試合】レート更新 - にわか: 1441.9 -> 1478.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第4試合】レート更新 - ドラ焼き: 1585.0 -> 1548.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第5試合】レート更新 - カイザ: 1610.9 -> 1627.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第5試合】レート更新 - おんそく: 1501.5 -> 1485.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第6試合】レート更新 - デンネ: 1419.2 -> 1399.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第6試合】レート更新 - セキボン: 1600.7 -> 1620.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第7試合】レート更新 - 村井: 1405.1 -> 1382.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第7試合】レート更新 - ドラ焼き: 1548.0 -> 1571.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第8試合】レート更新 - るるる: 1479.6 -> 1457.0
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第8試合】レート更新 - カイザ: 1627.3 -> 1649.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第9試合】レート更新 - セキボン: 1620.6 -> 1577.5
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第9試合】レート更新 - はるる: 1518.3 -> 1561.4
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第10試合】レート更新 - ZweiLance: 1557.5 -> 1581.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第10試合】レート更新 - flat: 1552.2 -> 1527.8
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第11試合】レート更新 - dotto: 1426.6 -> 1404.6
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第11試合】レート更新 - ZweiLance: 1581.9 -> 1603.9
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第12試合】レート更新 - flat: 1527.8 -> 1483.3
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    【2025年前期|第6節|第12試合】レート更新 - dotto: 1404.6 -> 1449.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    レート計算処理完了
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    返却データフレーム出力
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    
+   PLAYER_NAME  RATING
+0          カイザ  1649.9
+1    ZweiLance  1603.9
+2         セキボン  1577.5
+3        フェアリー  1574.9
+4         ドラ焼き  1571.0
+5          はるる  1561.4
+6          SON  1557.2
+7         あーくん  1518.6
+8          のすけ  1508.1
+9        あんだんて  1504.2
+10        ミノミー  1497.3
+11        りっきー  1494.3
+12        おんそく  1485.1
+13        flat  1483.3
+14         にわか  1478.9
+15         るるる  1457.0
+16         ひんた  1452.4
+17       dotto  1449.1
+18         むった  1447.5
+19        マイケル  1432.7
+20    リキセキタクジン  1414.3
+21         デンネ  1399.3
+22          村井  1382.1
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    calcRatingForEachPlayer    message    正常終了: レーティング計算処理
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    処理開始: ロジスティック回帰モデルを構築する為のデータ変換処理
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    空のデータフレーム出力
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    
+Empty DataFrame
+Columns: [YEAR, SECTION, MATCH, PLAYER_NAME, MATCH_RESULT, JANKEN_RESULT]
+Index: []
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    返却データフレーム出力
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    
+        YEAR SECTION  MATCH PLAYER_NAME  MATCH_RESULT  JANKEN_RESULT    RATING
+0    2024年前期     第1節   第1試合         ひんた             0              1 -0.708703
+1    2024年前期     第1節   第1試合       dotto             1              0 -0.757836
+2    2024年前期     第1節   第2試合         るるる             0              1 -0.640215
+3    2024年前期     第1節   第2試合        ドラ焼き             1              0  1.057100
+4    2024年前期     第1節   第3試合       フェアリー             0              1  1.115166
+5    2024年前期     第1節   第3試合        りっきー             1              0 -0.084866
+6    2024年前期     第1節   第4試合       dotto             1              1 -0.757836
+7    2024年前期     第1節   第4試合        ミノミー             0              0 -0.040200
+8    2024年前期     第1節   第5試合        ドラ焼き             0              1  1.057100
+9    2024年前期     第1節   第5試合         はるる             1              0  0.914168
+10   2024年前期     第1節   第6試合        りっきー             1              1 -0.084866
+11   2024年前期     第1節   第6試合         のすけ             0              0  0.120599
+12   2024年前期     第1節   第7試合        ミノミー             1              1 -0.040200
+13   2024年前期     第1節   第7試合         ひんた             0              0 -0.708703
+14   2024年前期     第1節   第8試合         るるる             0              1 -0.640215
+15   2024年前期     第1節   第8試合         はるる             1              0  0.914168
+16   2024年前期     第1節   第9試合         のすけ             1              1  0.120599
+17   2024年前期     第1節   第9試合       フェアリー             0              0  1.115166
+18   2024年前期     第2節   第1試合         カイザ             0              1  2.231820
+19   2024年前期     第2節   第1試合         はるる             1              0  0.914168
+20   2024年前期     第2節   第2試合         のすけ             1              1  0.120599
+21   2024年前期     第2節   第2試合        りっきー             0              0 -0.084866
+22   2024年前期     第2節   第3試合   ZweiLance             0              1  1.546939
+23   2024年前期     第2節   第3試合        セキボン             1              0  1.153876
+24   2024年前期     第2節   第4試合       フェアリー             0              1  1.115166
+25   2024年前期     第2節   第4試合         はるる             1              0  0.914168
+26   2024年前期     第2節   第5試合         のすけ             1              1  0.120599
+27   2024年前期     第2節   第5試合         にわか             0              0 -0.314152
+28   2024年前期     第2節   第6試合   ZweiLance             0              1  1.546939
+29   2024年前期     第2節   第6試合         るるる             1              0 -0.640215
+30   2024年前期     第2節   第7試合         カイザ             1              1  2.231820
+31   2024年前期     第2節   第7試合       フェアリー             0              0  1.115166
+32   2024年前期     第2節   第8試合         にわか             1              1 -0.314152
+33   2024年前期     第2節   第8試合        りっきー             0              0 -0.084866
+34   2024年前期     第2節   第9試合         るるる             0              1 -0.640215
+35   2024年前期     第2節   第9試合        セキボン             1              0  1.153876
+36   2024年前期     第3節   第1試合   ZweiLance             1              1  1.546939
+37   2024年前期     第3節   第1試合         SON             0              0  0.851635
+38   2024年前期     第3節   第2試合        おんそく             1              1 -0.221842
+39   2024年前期     第3節   第2試合         るるる             0              0 -0.640215
+40   2024年前期     第3節   第3試合         にわか             0              1 -0.314152
+41   2024年前期     第3節   第3試合        ミノミー             1              0 -0.040200
+42   2024年前期     第3節   第4試合         カイザ             0              1  2.231820
+43   2024年前期     第3節   第4試合         SON             1              0  0.851635
+44   2024年前期     第3節   第5試合       dotto             1              1 -0.757836
+45   2024年前期     第3節   第5試合         るるる             0              0 -0.640215
+46   2024年前期     第3節   第6試合        ドラ焼き             1              1  1.057100
+47   2024年前期     第3節   第6試合         にわか             0              0 -0.314152
+48   2024年前期     第3節   第7試合   ZweiLance             1              1  1.546939
+49   2024年前期     第3節   第7試合         カイザ             0              0  2.231820
+50   2024年前期     第3節   第8試合        おんそく             1              1 -0.221842
+51   2024年前期     第3節   第8試合       dotto             0              0 -0.757836
+52   2024年前期     第3節   第9試合        ミノミー             1              1 -0.040200
+53   2024年前期     第3節   第9試合        ドラ焼き             0              0  1.057100
+54   2024年前期     第4節   第1試合         のすけ             1              1  0.120599
+55   2024年前期     第4節   第1試合        りっきー             0              0 -0.084866
+56   2024年前期     第4節   第2試合        セキボン             0              1  1.153876
+57   2024年前期     第4節   第2試合        おんそく             1              0 -0.221842
+58   2024年前期     第4節   第3試合       dotto             1              1 -0.757836
+59   2024年前期     第4節   第3試合         はるる             0              0  0.914168
+60   2024年前期     第4節   第4試合         ひんた             1              1 -0.708703
+61   2024年前期     第4節   第4試合        りっきー             0              0 -0.084866
+62   2024年前期     第4節   第5試合         SON             0              1  0.851635
+63   2024年前期     第4節   第5試合        セキボン             1              0  1.153876
+64   2024年前期     第4節   第6試合         るるる             1              1 -0.640215
+65   2024年前期     第4節   第6試合       dotto             0              0 -0.757836
+66   2024年前期     第4節   第7試合         のすけ             1              1  0.120599
+67   2024年前期     第4節   第7試合         ひんた             0              0 -0.708703
+68   2024年前期     第4節   第8試合        おんそく             0              1 -0.221842
+69   2024年前期     第4節   第8試合         SON             1              0  0.851635
+70   2024年前期     第4節   第9試合         るるる             1              1 -0.640215
+71   2024年前期     第4節   第9試合         はるる             0              0  0.914168
+72   2024年前期     第5節   第1試合         るるる             1              1 -0.640215
+73   2024年前期     第5節   第1試合        ドラ焼き             0              0  1.057100
+74   2024年前期     第5節   第2試合        りっきー             0              1 -0.084866
+75   2024年前期     第5節   第2試合       フェアリー             1              0  1.115166
+76   2024年前期     第5節   第3試合         にわか             1              1 -0.314152
+77   2024年前期     第5節   第3試合        セキボン             0              0  1.153876
+78   2024年前期     第5節   第4試合         るるる             1              1 -0.640215
+79   2024年前期     第5節   第4試合         はるる             0              0  0.914168
+80   2024年前期     第5節   第5試合         のすけ             0              1  0.120599
+81   2024年前期     第5節   第5試合       フェアリー             1              0  1.115166
+82   2024年前期     第5節   第6試合         にわか             0              1 -0.314152
+83   2024年前期     第5節   第6試合        おんそく             1              0 -0.221842
+84   2024年前期     第5節   第7試合         はるる             1              1  0.914168
+85   2024年前期     第5節   第7試合        ドラ焼き             0              0  1.057100
+86   2024年前期     第5節   第8試合        りっきー             1              1 -0.084866
+87   2024年前期     第5節   第8試合         のすけ             0              0  0.120599
+88   2024年前期     第5節   第9試合        おんそく             0              1 -0.221842
+89   2024年前期     第5節   第9試合        セキボン             1              0  1.153876
+90   2024年前期     第6節   第1試合       フェアリー             1              1  1.115166
+91   2024年前期     第6節   第1試合        ミノミー             0              0 -0.040200
+92   2024年前期     第6節   第2試合         SON             1              1  0.851635
+93   2024年前期     第6節   第2試合        おんそく             0              0 -0.221842
+94   2024年前期     第6節   第3試合   ZweiLance             0              1  1.546939
+95   2024年前期     第6節   第3試合         るるる             1              0 -0.640215
+96   2024年前期     第6節   第4試合        ミノミー             0              1 -0.040200
+97   2024年前期     第6節   第4試合        セキボン             1              0  1.153876
+98   2024年前期     第6節   第5試合         カイザ             0              1  2.231820
+99   2024年前期     第6節   第5試合        おんそく             1              0 -0.221842
+100  2024年前期     第6節   第6試合   ZweiLance             0              1  1.546939
+101  2024年前期     第6節   第6試合        ドラ焼き             1              0  1.057100
+102  2024年前期     第6節   第7試合        セキボン             1              1  1.153876
+103  2024年前期     第6節   第7試合       フェアリー             0              0  1.115166
+104  2024年前期     第6節   第8試合         SON             1              1  0.851635
+105  2024年前期     第6節   第8試合         カイザ             0              0  2.231820
+106  2024年前期     第6節   第9試合         るるる             0              1 -0.640215
+107  2024年前期     第6節   第9試合        ドラ焼き             1              0  1.057100
+108  2024年後期     第1節   第1試合        あーくん             0              1  0.276930
+109  2024年後期     第1節   第1試合        りっきー             1              0 -0.084866
+110  2024年後期     第1節   第2試合        ドラ焼き             1              1  1.057100
+111  2024年後期     第1節   第2試合         はるる             0              0  0.914168
+112  2024年後期     第1節   第3試合         るるる             1              1 -0.640215
+113  2024年後期     第1節   第3試合       dotto             0              0 -0.757836
+114  2024年後期     第1節   第4試合         にわか             1              1 -0.314152
+115  2024年後期     第1節   第4試合        りっきー             0              0 -0.084866
+116  2024年後期     第1節   第5試合    リキセキタクジン             0              1 -1.275964
+117  2024年後期     第1節   第5試合        ドラ焼き             1              0  1.057100
+118  2024年後期     第1節   第6試合       dotto             1              1 -0.757836
+119  2024年後期     第1節   第6試合        マイケル             0              0 -1.002011
+120  2024年後期     第1節   第7試合        あーくん             1              1  0.276930
+121  2024年後期     第1節   第7試合         にわか             0              0 -0.314152
+122  2024年後期     第1節   第8試合         はるる             1              1  0.914168
+123  2024年後期     第1節   第8試合    リキセキタクジン             0              0 -1.275964
+124  2024年後期     第1節   第9試合         るるる             1              1 -0.640215
+125  2024年後期     第1節   第9試合        マイケル             0              0 -1.002011
+126  2024年後期     第2節   第1試合        りっきー             1              1 -0.084866
+127  2024年後期     第2節   第1試合   ZweiLance             0              0  1.546939
+128  2024年後期     第2節   第2試合         にわか             1              1 -0.314152
+129  2024年後期     第2節   第2試合        セキボン             0              0  1.153876
+130  2024年後期     第2節   第3試合        おんそく             0              1 -0.221842
+131  2024年後期     第2節   第3試合         カイザ             1              0  2.231820
+132  2024年後期     第2節   第4試合   ZweiLance             1              1  1.546939
+133  2024年後期     第2節   第4試合         るるる             0              0 -0.640215
+134  2024年後期     第2節   第5試合         にわか             0              1 -0.314152
+135  2024年後期     第2節   第5試合       フェアリー             1              0  1.115166
+136  2024年後期     第2節   第6試合        あーくん             1              1  0.276930
+137  2024年後期     第2節   第6試合        おんそく             0              0 -0.221842
+138  2024年後期     第2節   第7試合        りっきー             1              1 -0.084866
+139  2024年後期     第2節   第7試合         るるる             0              0 -0.640215
+140  2024年後期     第2節   第8試合       フェアリー             1              1  1.115166
+141  2024年後期     第2節   第8試合        セキボン             0              0  1.153876
+142  2024年後期     第2節   第9試合         カイザ             1              1  2.231820
+143  2024年後期     第2節   第9試合        あーくん             0              0  0.276930
+144  2024年後期     第3節   第1試合   ZweiLance             1              1  1.546939
+145  2024年後期     第3節   第1試合         はるる             0              0  0.914168
+146  2024年後期     第3節   第2試合          村井             0              1 -1.755381
+147  2024年後期     第3節   第2試合        マイケル             1              0 -1.002011
+148  2024年後期     第3節   第3試合    リキセキタクジン             0              1 -1.275964
+149  2024年後期     第3節   第3試合         るるる             1              0 -0.640215
+150  2024年後期     第3節   第4試合        ドラ焼き             0              1  1.057100
+151  2024年後期     第3節   第4試合         はるる             1              0  0.914168
+152  2024年後期     第3節   第5試合       dotto             1              1 -0.757836
+153  2024年後期     第3節   第5試合          村井             0              0 -1.755381
+154  2024年後期     第3節   第6試合        セキボン             0              1  1.153876
+155  2024年後期     第3節   第6試合         るるる             1              0 -0.640215
+156  2024年後期     第3節   第7試合   ZweiLance             1              1  1.546939
+157  2024年後期     第3節   第7試合        ドラ焼き             0              0  1.057100
+158  2024年後期     第3節   第8試合       dotto             1              1 -0.757836
+159  2024年後期     第3節   第8試合        マイケル             0              0 -1.002011
+160  2024年後期     第3節   第9試合    リキセキタクジン             0              1 -1.275964
+161  2024年後期     第3節   第9試合        セキボン             1              0  1.153876
+162  2024年後期     第3節  第10試合       フェアリー             1              1  1.115166
+163  2024年後期     第3節  第10試合        ドラ焼き             0              0  1.057100
+164  2024年後期     第3節  第11試合        おんそく             0              1 -0.221842
+165  2024年後期     第3節  第11試合        ドラ焼き             1              0  1.057100
+166  2024年後期     第3節  第12試合        おんそく             0              1 -0.221842
+167  2024年後期     第3節  第12試合       フェアリー             1              0  1.115166
+168  2024年後期     第4節   第1試合        セキボン             0              1  1.153876
+169  2024年後期     第4節   第1試合   ZweiLance             1              0  1.546939
+170  2024年後期     第4節   第2試合       dotto             0              1 -0.757836
+171  2024年後期     第4節   第2試合        おんそく             1              0 -0.221842
+172  2024年後期     第4節   第3試合         にわか             1              1 -0.314152
+173  2024年後期     第4節   第3試合        りっきー             0              0 -0.084866
+174  2024年後期     第4節   第4試合       フェアリー             0              1  1.115166
+175  2024年後期     第4節   第4試合        セキボン             1              0  1.153876
+176  2024年後期     第4節   第5試合        あーくん             1              1  0.276930
+177  2024年後期     第4節   第5試合       dotto             0              0 -0.757836
+178  2024年後期     第4節   第6試合         るるる             0              1 -0.640215
+179  2024年後期     第4節   第6試合        りっきー             1              0 -0.084866
+180  2024年後期     第4節   第7試合   ZweiLance             0              1  1.546939
+181  2024年後期     第4節   第7試合       フェアリー             1              0  1.115166
+182  2024年後期     第4節   第8試合        おんそく             1              1 -0.221842
+183  2024年後期     第4節   第8試合        あーくん             0              0  0.276930
+184  2024年後期     第4節   第9試合         るるる             1              1 -0.640215
+185  2024年後期     第4節   第9試合         にわか             0              0 -0.314152
+186  2024年後期     第5節   第1試合         はるる             0              1  0.914168
+187  2024年後期     第5節   第1試合         カイザ             1              0  2.231820
+188  2024年後期     第5節   第2試合         るるる             1              1 -0.640215
+189  2024年後期     第5節   第2試合        りっきー             0              0 -0.084866
+190  2024年後期     第5節   第3試合          村井             0              1 -1.755381
+191  2024年後期     第5節   第3試合        ドラ焼き             1              0  1.057100
+192  2024年後期     第5節   第4試合         はるる             1              1  0.914168
+193  2024年後期     第5節   第4試合        マイケル             0              0 -1.002011
+194  2024年後期     第5節   第5試合         にわか             0              1 -0.314152
+195  2024年後期     第5節   第5試合         るるる             1              0 -0.640215
+196  2024年後期     第5節   第6試合   ZweiLance             1              1  1.546939
+197  2024年後期     第5節   第6試合          村井             0              0 -1.755381
+198  2024年後期     第5節   第7試合         カイザ             1              1  2.231820
+199  2024年後期     第5節   第7試合        マイケル             0              0 -1.002011
+200  2024年後期     第5節   第8試合         にわか             1              1 -0.314152
+201  2024年後期     第5節   第8試合        りっきー             0              0 -0.084866
+202  2024年後期     第5節   第9試合        ドラ焼き             0              1  1.057100
+203  2024年後期     第5節   第9試合   ZweiLance             1              0  1.546939
+204  2024年後期     第6節   第1試合          村井             1              1 -1.755381
+205  2024年後期     第6節   第1試合        おんそく             0              0 -0.221842
+206  2024年後期     第6節   第2試合    リキセキタクジン             1              1 -1.275964
+207  2024年後期     第6節   第2試合         るるる             0              0 -0.640215
+208  2024年後期     第6節   第3試合       フェアリー             0              1  1.115166
+209  2024年後期     第6節   第3試合         にわか             1              0 -0.314152
+210  2024年後期     第6節   第4試合        セキボン             1              1  1.153876
+211  2024年後期     第6節   第4試合        おんそく             0              0 -0.221842
+212  2024年後期     第6節   第5試合        ドラ焼き             1              1  1.057100
+213  2024年後期     第6節   第5試合    リキセキタクジン             0              0 -1.275964
+214  2024年後期     第6節   第6試合         にわか             0              1 -0.314152
+215  2024年後期     第6節   第6試合         カイザ             1              0  2.231820
+216  2024年後期     第6節   第7試合        セキボン             0              1  1.153876
+217  2024年後期     第6節   第7試合          村井             1              0 -1.755381
+218  2024年後期     第6節   第8試合        ドラ焼き             1              1  1.057100
+219  2024年後期     第6節   第8試合         るるる             0              0 -0.640215
+220  2024年後期     第6節   第9試合         カイザ             1              1  2.231820
+221  2024年後期     第6節   第9試合       フェアリー             0              0  1.115166
+222  2024年後期     第6節  第10試合       dotto             0              1 -0.757836
+223  2024年後期     第6節  第10試合   ZweiLance             1              0  1.546939
+224  2024年後期     第6節  第11試合        flat             1              1 -0.248642
+225  2024年後期     第6節  第11試合   ZweiLance             0              0  1.546939
+226  2024年後期     第6節  第12試合        flat             1              1 -0.248642
+227  2024年後期     第6節  第12試合       dotto             0              0 -0.757836
+228  2025年前期     第1節   第1試合       dotto             0              1 -0.757836
+229  2025年前期     第1節   第1試合         るるる             1              0 -0.640215
+230  2025年前期     第1節   第2試合        りっきー             1              1 -0.084866
+231  2025年前期     第1節   第2試合       フェアリー             0              0  1.115166
+232  2025年前期     第1節   第3試合         カイザ             1              1  2.231820
+233  2025年前期     第1節   第3試合         はるる             0              0  0.914168
+234  2025年前期     第1節   第4試合         デンネ             0              1 -1.499295
+235  2025年前期     第1節   第4試合       dotto             1              0 -0.757836
+236  2025年前期     第1節   第5試合       あんだんて             1              1  0.062533
+237  2025年前期     第1節   第5試合        りっきー             0              0 -0.084866
+238  2025年前期     第1節   第6試合         カイザ             0              1  2.231820
+239  2025年前期     第1節   第6試合         むった             1              0 -0.781658
+240  2025年前期     第1節   第7試合         デンネ             0              1 -1.499295
+241  2025年前期     第1節   第7試合         るるる             1              0 -0.640215
+242  2025年前期     第1節   第8試合       フェアリー             1              1  1.115166
+243  2025年前期     第1節   第8試合       あんだんて             0              0  0.062533
+244  2025年前期     第1節   第9試合         むった             1              1 -0.781658
+245  2025年前期     第1節   第9試合         はるる             0              0  0.914168
+246  2025年前期     第2節   第1試合       あんだんて             1              1  0.062533
+247  2025年前期     第2節   第1試合        りっきー             0              0 -0.084866
+248  2025年前期     第2節   第2試合        おんそく             1              1 -0.221842
+249  2025年前期     第2節   第2試合       dotto             0              0 -0.757836
+250  2025年前期     第2節   第3試合         にわか             0              1 -0.314152
+251  2025年前期     第2節   第3試合        セキボン             1              0  1.153876
+252  2025年前期     第2節   第4試合         るるる             1              1 -0.640215
+253  2025年前期     第2節   第4試合       あんだんて             0              0  0.062533
+254  2025年前期     第2節   第5試合        あーくん             1              1  0.276930
+255  2025年前期     第2節   第5試合        おんそく             0              0 -0.221842
+256  2025年前期     第2節   第6試合          村井             0              1 -1.755381
+257  2025年前期     第2節   第6試合         にわか             1              0 -0.314152
+258  2025年前期     第2節   第7試合        りっきー             1              1 -0.084866
+259  2025年前期     第2節   第7試合         るるる             0              0 -0.640215
+260  2025年前期     第2節   第8試合       dotto             0              1 -0.757836
+261  2025年前期     第2節   第8試合        あーくん             1              0  0.276930
+262  2025年前期     第2節   第9試合          村井             0              1 -1.755381
+263  2025年前期     第2節   第9試合        セキボン             1              0  1.153876
+264  2025年前期     第3節   第1試合         デンネ             1              1 -1.499295
+265  2025年前期     第3節   第1試合         はるる             0              0  0.914168
+266  2025年前期     第3節   第2試合         にわか             1              1 -0.314152
+267  2025年前期     第3節   第2試合          村井             0              0 -1.755381
+268  2025年前期     第3節   第3試合         むった             1              1 -0.781658
+269  2025年前期     第3節   第3試合         るるる             0              0 -0.640215
+270  2025年前期     第3節   第4試合        りっきー             0              1 -0.084866
+271  2025年前期     第3節   第4試合         はるる             1              0  0.914168
+272  2025年前期     第3節   第5試合          村井             0              1 -1.755381
+273  2025年前期     第3節   第5試合         カイザ             1              0  2.231820
+274  2025年前期     第3節   第6試合        セキボン             1              1  1.153876
+275  2025年前期     第3節   第6試合         るるる             0              0 -0.640215
+276  2025年前期     第3節   第7試合         デンネ             1              1 -1.499295
+277  2025年前期     第3節   第7試合        りっきー             0              0 -0.084866
+278  2025年前期     第3節   第8試合         にわか             0              1 -0.314152
+279  2025年前期     第3節   第8試合         カイザ             1              0  2.231820
+280  2025年前期     第3節   第9試合         むった             0              1 -0.781658
+281  2025年前期     第3節   第9試合        セキボン             1              0  1.153876
+282  2025年前期     第3節  第10試合       フェアリー             1              1  1.115166
+283  2025年前期     第3節  第10試合        おんそく             0              0 -0.221842
+284  2025年前期     第3節  第11試合        ドラ焼き             1              1  1.057100
+285  2025年前期     第3節  第11試合       フェアリー             0              0  1.115166
+286  2025年前期     第3節  第12試合        ドラ焼き             1              1  1.057100
+287  2025年前期     第3節  第12試合        おんそく             0              0 -0.221842
+288  2025年前期     第4節   第1試合         むった             0              1 -0.781658
+289  2025年前期     第4節   第1試合        ドラ焼き             1              0  1.057100
+290  2025年前期     第4節   第2試合         デンネ             0              1 -1.499295
+291  2025年前期     第4節   第2試合        りっきー             1              0 -0.084866
+292  2025年前期     第4節   第3試合        おんそく             1              1 -0.221842
+293  2025年前期     第4節   第3試合       dotto             0              0 -0.757836
+294  2025年前期     第4節   第4試合       フェアリー             1              1  1.115166
+295  2025年前期     第4節   第4試合        ドラ焼き             0              0  1.057100
+296  2025年前期     第4節   第5試合        りっきー             1              1 -0.084866
+297  2025年前期     第4節   第5試合         るるる             0              0 -0.640215
+298  2025年前期     第4節   第6試合        あーくん             0              1  0.276930
+299  2025年前期     第4節   第6試合       dotto             1              0 -0.757836
+300  2025年前期     第4節   第7試合       フェアリー             1              1  1.115166
+301  2025年前期     第4節   第7試合         むった             0              0 -0.781658
+302  2025年前期     第4節   第8試合         デンネ             0              1 -1.499295
+303  2025年前期     第4節   第8試合         るるる             1              0 -0.640215
+304  2025年前期     第4節   第9試合        おんそく             1              1 -0.221842
+305  2025年前期     第4節   第9試合        あーくん             0              0  0.276930
+306  2025年前期     第5節   第1試合        あーくん             1              1  0.276930
+307  2025年前期     第5節   第1試合        ドラ焼き             0              0  1.057100
+308  2025年前期     第5節   第2試合        セキボン             1              1  1.153876
+309  2025年前期     第5節   第2試合         はるる             0              0  0.914168
+310  2025年前期     第5節   第3試合        りっきー             1              1 -0.084866
+311  2025年前期     第5節   第3試合         るるる             0              0 -0.640215
+312  2025年前期     第5節   第4試合        あーくん             1              1  0.276930
+313  2025年前期     第5節   第4試合         むった             0              0 -0.781658
+314  2025年前期     第5節   第5試合         はるる             1              1  0.914168
+315  2025年前期     第5節   第5試合         デンネ             0              0 -1.499295
+316  2025年前期     第5節   第6試合         るるる             1              1 -0.640215
+317  2025年前期     第5節   第6試合       あんだんて             0              0  0.062533
+318  2025年前期     第5節   第7試合         むった             0              1 -0.781658
+319  2025年前期     第5節   第7試合        ドラ焼き             1              0  1.057100
+320  2025年前期     第5節   第8試合         デンネ             1              1 -1.499295
+321  2025年前期     第5節   第8試合        セキボン             0              0  1.153876
+322  2025年前期     第5節   第9試合       あんだんて             1              1  0.062533
+323  2025年前期     第5節   第9試合        りっきー             0              0 -0.084866
+324  2025年前期     第6節   第1試合          村井             1              1 -1.755381
+325  2025年前期     第6節   第1試合         にわか             0              0 -0.314152
+326  2025年前期     第6節   第2試合         るるる             0              1 -0.640215
+327  2025年前期     第6節   第2試合        おんそく             1              0 -0.221842
+328  2025年前期     第6節   第3試合         はるる             1              1  0.914168
+329  2025年前期     第6節   第3試合         デンネ             0              0 -1.499295
+330  2025年前期     第6節   第4試合         にわか             1              1 -0.314152
+331  2025年前期     第6節   第4試合        ドラ焼き             0              0  1.057100
+332  2025年前期     第6節   第5試合         カイザ             1              1  2.231820
+333  2025年前期     第6節   第5試合        おんそく             0              0 -0.221842
+334  2025年前期     第6節   第6試合         デンネ             0              1 -1.499295
+335  2025年前期     第6節   第6試合        セキボン             1              0  1.153876
+336  2025年前期     第6節   第7試合          村井             0              1 -1.755381
+337  2025年前期     第6節   第7試合        ドラ焼き             1              0  1.057100
+338  2025年前期     第6節   第8試合         るるる             0              1 -0.640215
+339  2025年前期     第6節   第8試合         カイザ             1              0  2.231820
+340  2025年前期     第6節   第9試合        セキボン             0              1  1.153876
+341  2025年前期     第6節   第9試合         はるる             1              0  0.914168
+342  2025年前期     第6節  第10試合   ZweiLance             1              1  1.546939
+343  2025年前期     第6節  第10試合        flat             0              0 -0.248642
+344  2025年前期     第6節  第11試合       dotto             0              1 -0.757836
+345  2025年前期     第6節  第11試合   ZweiLance             1              0  1.546939
+346  2025年前期     第6節  第12試合        flat             0              1 -0.248642
+347  2025年前期     第6節  第12試合       dotto             1              0 -0.757836
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    convertDataForLogisticRegression    message    正常終了: ロジスティック回帰モデルを構築する為のデータ変換処理
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    処理開始: ロジスティック回帰モデル構築処理
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    モデル構築完了: 結果を表示
+2025/11/14 20:59:09 [INFO]    analize_DTL.py    buildLogisticRegressionModel    message                               Logit Regression Results                           
+==============================================================================
+Dep. Variable:           MATCH_RESULT   No. Observations:                  348
+Model:                          Logit   Df Residuals:                      345
+Method:                           MLE   Df Model:                            2
+Date:                Fri, 14 Nov 2025   Pseudo R-squ.:                 0.05507
+Time:                        20:59:09   Log-Likelihood:                -227.93
+converged:                       True   LL-Null:                       -241.22
+Covariance Type:            nonrobust   LLR p-value:                 1.704e-06
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            -0.4773      0.161     -2.955      0.003      -0.794      -0.161
+JANKEN_RESULT     0.7949      0.225      3.526      0.000       0.353       1.237
+RATING            0.4529      0.116      3.909      0.000       0.226       0.680
+=================================================================================
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    寄与率を計算, 結果を表示
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    const: 27.67%
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    JANKEN_RESULT: 46.08%
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    RATING: 26.25%
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    buildLogisticRegressionModel    message    正常終了: ロジスティック回帰モデル構築処理
+2025/11/14 20:59:09 [DEBUG]    analize_DTL.py    analize_DTL    message    正常終了: メイン処理
